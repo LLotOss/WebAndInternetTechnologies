@@ -28,9 +28,8 @@
             </p>
 
             <ul type="None">
-                <li><label><input type="radio" name="ox_param" value="surname">Фамилия И.</label></li>
-                <li><label><input type="radio" name="ox_param" value="country">Страна</label></li>
-                <li><label><input type="radio" name="ox_param" value="place">Архитектурный стиль</label></li>
+                <li><label><input type="radio" id="country-graph" name="ox_param" value="country">Страна</label></li>
+                <li><label><input type="radio" id="style-graph" name="ox_param" value="style">Архитектурный стиль</label></li>
             </ul>
 
             <p>
@@ -38,9 +37,9 @@
             </p>
 
             <ul type="None">
-                <li><label><input type="checkbox" name="oy_param" value="completed">Количество проектов всего</label></li>
-                <li><label><input type="checkbox" name="oy_param" value="completed">Самый длительный по строительству проект</label></li>
-                <li><label><input type="checkbox" name="oy_param" value="abandoned">Количество проектов в стране рождения</label></li>
+                <li><label><input type="checkbox" id="total-amount-graph" name="oy_param" value="total-amount">Приблизительное количество проектов всего</label></li>
+                <li><label><input type="checkbox" id="length-graph" name="oy_param" value="max_length">Самый длительный по строительству проект</label></li>
+                <li><label><input type="checkbox" id="birth-country-amount-graph" name="oy_param" value="birth-country-amount">Приблизительное количество проектов от уроженцев страны</label></li>
             </ul>
 
             <p>
@@ -61,7 +60,7 @@
         </p>
 				
 				<p>
-					<label>Архитектурный стиль: <input type="text" name="style" id="style"></label>
+					<label>Архитектурный стиль: <input type="text" name="style" id="style_filter"></label>
 				</p>
 
         <p>
@@ -73,15 +72,15 @@
         </p>
 
         <p>
-          <label>Количество всех проектов: от <input type="text" name="minimum_amount_total" id="minimum_amount_total"> проектов </label> <label> до <input type="text" name="maximum_amount_total" id="maximum_amount_total"> проектов</label>
+          <label>Количество всех проектов: от <input type="number" name="minimum_amount_total" id="minimum_amount_total"> проектов </label> <label> до <input type="text" name="maximum_amount_total" id="maximum_amount_total"> проектов</label>
         </p>
 
         <p>
-          <label>Самый длительный по строительству проект: от <input type="text" name="minimum_amount_complete" id="minimum_amount_complete"> год(а/ов)</label> <label>до <input type="text" name="maximum_amount_complete" id="maximum_amount_complete"> год(а/ов)</label>
+          <label>Самый длительный по строительству проект: от <input type="number" name="minimum_length_filter" id="minimum_amount_complete"> год(а/ов)</label> <label>до <input type="text" name="maximum_amount_complete" id="maximum_amount_complete"> год(а/ов)</label>
         </p>
 
         <p>
-          <label>Количество проектов в стране рождения: от <input type="text" name="minimum_amount_in-progress" id="minimum_amount_in-progress"> проектов</label> <label>до <input type="text" name="maximum_amount_in-progress" id="maximum_amount_in-progress"> проектов</label>                   
+          <label>Количество проектов в стране рождения: от <input type="number" name="minimum_amount_in-progress" id="minimum_amount_in-progress"> проектов</label> <label>до <input type="text" name="maximum_amount_in-progress" id="maximum_amount_in-progress"> проектов</label>                   
         </p>
 
         <p>
@@ -99,13 +98,14 @@
           <label for="sort_first">Первый уровень:</label>
                 
           <select name="sort_first" id="sort_first">
+            <option value="none">Нет</option>
             <option value="surname-name">Фамилия имя</option>
 						<option value="style">Архитектурный стиль</option>
             <option value="birth-country">Страна рождения</option>
             <option value="comp-country">Страна архитекторского бюро</option>
             <option value="total-amount">Количество всех проектов</option>
             <option value="max-length">Самый длительный по строительству проект</option>
-            <option value="salary">Количество проектов в стране рождения</option>
+            <option value="birth-country-amount">Количество проектов в стране рождения</option>
 					</select>
 
           <label>
@@ -125,7 +125,7 @@
             <option value="comp-country">Страна архитекторского бюро</option>
             <option value="total-amount">Количество всех проектов</option>
             <option value="max-length">Самый длительный по строительству проект</option>
-            <option value="salary">Количество проектов в стране рождения</option>
+            <option value="birth-country-amount">Количество проектов в стране рождения</option>
           </select>
 
           <label>
@@ -145,7 +145,7 @@
             <option value="comp-country">Страна архитекторского бюро</option>
             <option value="total-amount">Количество всех проектов</option>
             <option value="max-length">Самый длительный по строительству проект</option>
-            <option value="salary">Количество проектов в стране рождения</option>
+            <option value="birth-country-amount">Количество проектов в стране рождения</option>
           </select>
 
           <label>
@@ -168,16 +168,16 @@
 				<th>Архитектурный стиль</th>
         <th>Страна рождения</th>
         <th>Страна <br>архитекторского бюро</th>
-        <th>Всего проектов</th>
+        <th>Приблизительное количество проектов</th>
 				<th>Самый длительный по строительству проект, <br>года</th>
-        <th>Проектов в стране рождения</th>	
+        <th>Приблизительное количество проектов в стране рождения</th>	
         </tr>
       </thead>
 			
 			<tbody>
 				<tr>
 					<td>Райт Фрэнк Ллойд</td>
-					<td>Органическая архитектура, прерии</td>
+					<td>Органическая архитектура</td>
 					<td>США</td>
 					<td>США</td>
 					<td>400+</td>
@@ -187,7 +187,7 @@
 				
 				<tr>
 					<td>Гери Фрэнк</td>
-					<td>Деконструктивизм, постмодернизм</td>
+					<td>Деконструктивизм</td>
 					<td>Канада</td>
 					<td>США</td>
 					<td>30+</td>
@@ -197,7 +197,7 @@
 				
 				<tr>
 					<td>Фостер Норман</td>
-					<td>Хай-тек, современный модернизм</td>
+					<td>Хай-тек</td>
 					<td>Великобритания</td>
 					<td>Великобритания</td>
 					<td>200+</td>
@@ -207,7 +207,7 @@
 				
 				<tr>
 					<td>Пиано Ренцо</td>
-					<td>Хай-тек, технологический модернизм</td>
+					<td>Хай-тек</td>
 					<td>Италия</td>
 					<td>Италия</td>
 					<td>100+</td>
@@ -217,7 +217,7 @@
 				
 				<tr>
 					<td>Калатрава Сантьяго</td>
-					<td>Неофутуризм, скульптурная архитектура</td>
+					<td>Неофутуризм</td>
 					<td>Испания</td>
 					<td>Швейцария</td>
 					<td>80+</td>
@@ -227,7 +227,7 @@
 				
 				<tr>
 					<td>Хадид Заха</td>
-					<td>Неофутуризм, деконструктивизм</td>
+					<td>Деконструктивизм</td>
 					<td>Ирак</td>
 					<td>Великобритания</td>
 					<td>40+</td>
@@ -237,7 +237,7 @@
 				
 				<tr>
 					<td>Корбюзье Ле</td>
-					<td>Модернизм, интернациональный стиль</td>
+					<td>Интернациональный стиль</td>
 					<td>Швейцария</td>
 					<td>Франция</td>
 					<td>300+</td>
