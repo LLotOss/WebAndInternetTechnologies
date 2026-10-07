@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+		<meta charset="utf-8">
+		<title>
+			Главная страница.
+		</title>
+  </head>
+	<body>
+		<ul type="none">
+			<li>
+				<a href="main_page.html#Main">Самые известные архитекторы мира</a>
+			</li>
+
+			<li>
+				<a href="#Tablet"><big>Список архитекторов</big></a>
+			</li>
+		</ul>
+		
+		<hr>
+		
+		<form>
+        <details>
+            <summary><strong><big><em>График</em></big></strong></summary>
+
+            <p>
+                <big>Значение по оси OX</big>
+            </p>
+
+            <ul type="None">
+                <li><label><input type="radio" name="ox_param" value="surname">Фамилия И.</label></li>
+                <li><label><input type="radio" name="ox_param" value="country">Страна</label></li>
+                <li><label><input type="radio" name="ox_param" value="place">Архитектурный стиль</label></li>
+            </ul>
+
+            <p>
+                <big>Значение по оси OY</big>
+            </p>
+
+            <ul type="None">
+                <li><label><input type="checkbox" name="oy_param" value="completed">Количество проектов всего</label></li>
+                <li><label><input type="checkbox" name="oy_param" value="completed">Самый длительный по строительству проект</label></li>
+                <li><label><input type="checkbox" name="oy_param" value="abandoned">Количество проектов в стране рождения</label></li>
+            </ul>
+
+            <p>
+                <input type="button" value="Построить">
+            </p>
+
+            <p> 
+                Здесь будет график
+            </p>
+        </details>  
+    </form>
+		
+		<form>
+      <details>
+        <summary><strong><big><em>Фильтры</em></big></strong></summary>
+        <p>
+          <label>Фамилия-имя: <input type="text" name="surname_filter" id="surname_filter"></label>
+        </p>
+				
+				<p>
+					<label>Архитектурный стиль: <input type="text" name="surname_filter" id="surname_filter"></label>
+				</p>
+
+        <p>
+          <label>Страна рождения: <input type="text" name="country_filter" id="country_filter"></label>
+        </p>
+
+        <p>
+          <label>Страна архитектурной компании: <input type="text" name="company_country_filter" id="company_country_filter"></label>
+        </p>
+
+        <p>
+          <label>Количество всех проектов: от <input type="text" name="minimum_amount_total" id="minimum_amount_total"> проектов </label> <label> до <input type="text" name="maximum_amount_total" id="maximum_amount_total"> проектов</sup></label>
+        </p>
+
+        <p>
+          <label>Самый длительный по строительству проект: от <input type="text" name="minimum_amount_complete" id="minimum_amount_complete"> год(а/ов)</label> <label>до <input type="text" name="maximum_amount_complete" id="maximum_amount_complete"> год(а/ов)</label>
+        </p>
+
+        <p>
+          <label>Количество проектов в стране рождения: от <input type="text" name="minimum_amount_in-progress" id="minimum_amount_in-progress"> проектов</label> <label>до <input type="text" name="maximum_amount_in-progress" id="maximum_amount_in-progress"> проектов</label>                   
+        </p>
+
+        <p>
+          <input type="button" value="Найти">
+        </p>
+      </details>
+    </form>
+		
+		<form>
+      <details>
+        <summary><strong><big><em>Сортировка</em></big></strong></summary>
+
+        <p>
+            
+          <label for="sort_first">Первый уровень:</label>
+                
+          <select name="sort_first" id="sort_first">
+            <option value="surname-name">Фамилия имя</option>
+						<option value="style">Архитектурный стиль</option>
+            <option value="birth-country">Страна рождения</option>
+            <option value="comp-country">Страна архитекторского бюро</option>
+            <option value="total-amount">Количество всех проектов</option>
+            <option value="max-length">Самый длительный по строительству проект</option>
+            <option value="salary">Количество проектов в стране рождения</option>
+					</select>
+
+          <label>
+            по убыванию?
+            <input type="checkbox">
+          </label>
+        </p>
+                
+        <p>                        
+          <label for="sort_second">Второй уровень:</label>
+
+          <select name="sort_second" id="sort_second">
+            <option value="none">Нет</option>
+            <option value="surname-name">Фамилия имя</option>
+						<option value="style">Архитектурный стиль</option>
+            <option value="birth-country">Страна рождения</option>
+            <option value="comp-country">Страна архитекторского бюро</option>
+            <option value="total-amount">Количество всех проектов</option>
+            <option value="max-length">Самый длительный по строительству проект</option>
+            <option value="salary">Количество проектов в стране рождения</option>
+          </select>
+
+          <label>
+            по убыванию?
+            <input type="checkbox">
+          </label>
+        </p>
+
+        <p>
+          <label for="sort_third">Третий уровень:</label>
+                
+          <select name="sort_third" id="sort_third">
+            <option value="none">Нет</option>
+            <option value="surname-name">Фамилия имя</option>
+						<option value="style">Архитектурный стиль</option>
+            <option value="birth-country">Страна рождения</option>
+            <option value="comp-country">Страна архитекторского бюро</option>
+            <option value="total-amount">Количество всех проектов</option>
+            <option value="max-length">Самый длительный по строительству проект</option>
+            <option value="salary">Количество проектов в стране рождения</option>
+          </select>
+
+          <label>
+            по убыванию?
+            <input type="checkbox">
+          </label>
+        </p>
+
+
+        <p>
+          <input type="button" value="Сортировать">
+        </p>
+      </details>
+    </form>
+		
+		<table cellpadding="4" cellspacing="4" border="2">
+      <thead>
+        <tr>
+        <th>Фамилия Имя</th>
+				<th>Архитектурный стиль</th>
+        <th>Страна рождения</th>
+        <th>Страна <br>архитекторского бюро</th>
+        <th>Всего проектов</th>
+				<th>Самый длительный по строительству проект, <br>года</th>
+        <th>Проектов в стране рождения</th>	
+        </tr>
+      </thead>
+			
+			<tbody>
+				<tr>
+					<td>Райт Фрэнк Ллойд</td>
+					<td>Органическая архитектура, прерии</td>
+					<td>США</td>
+					<td>США</td>
+					<td>400+</td>
+					<td>16</td>
+					<td>350+</td>
+				</tr>
+				
+				<tr>
+					<td>Гери Фрэнк</td>
+					<td>Деконструктивизм, постмодернизм</td>
+					<td>Канада</td>
+					<td>США</td>
+					<td>30+</td>
+					<td>4</td>
+					<td>25+</td>
+				</tr>
+				
+				<tr>
+					<td>Фостер Норман</td>
+					<td>Хай-тек, современный модернизм</td>
+					<td>Великобритания</td>
+					<td>Великобритания</td>
+					<td>200+</td>
+					<td>8</td>
+					<td>100+</td>
+					</tr>
+				
+				<tr>
+					<td>Пиано Ренцо</td>
+					<td>Хай-тек, технологический модернизм</td>
+					<td>Италия</td>
+					<td>Италия</td>
+					<td>100+</td>
+					<td>5</td>
+					<td>35+</td>
+				</tr>
+				
+				<tr>
+					<td>Калатрава Сантьяго</td>
+					<td>Неофутуризм, скульптурная архитектура</td>
+					<td>Испания</td>
+					<td>Швейцария</td>
+					<td>80+</td>
+					<td>5</td>
+					<td>20+</td>
+				</tr>
+				
+				<tr>
+					<td>Хадид Заха</td>
+					<td>Неофутуризм, деконструктивизм</td>
+					<td>Ирак</td>
+					<td>Великобритания</td>
+					<td>40+</td>
+					<td>14</td>
+					<td>0</td>
+				</tr>
+				
+				<tr>
+					<td>Корбюзье Ле</td>
+					<td>Модернизм, интернациональный стиль</td>
+					<td>Швейцария</td>
+					<td>Франция</td>
+					<td>300+</td>
+					<td>14</td>
+					<td>40+</td>
+				</tr>
+				
+				<tr>
+					<td>Мис ван дер Роэ Людвиг</td>
+					<td>Модернизм, интернациональный стиль</td>
+					<td>Германия</td>
+					<td>США</td>
+					<td>60+</td>
+					<td>19</td>
+					<td>25+</td>
+				</tr>
+				
+				<tr>
+					<td>Гропиус Вальтер</td>
+					<td>Баухаус, модернизм</td>
+					<td>Германия</td>
+					<td>США</td>
+					<td>80+</td>
+					<td>2</td>
+					<td>20+</td>
+				</tr>
+				
+				<tr>
+					<td>Аалто Алвар</td>
+					<td>Северный модернизм, органическая архитектура</td>
+					<td>Финляндия</td>
+					<td>Финляндия</td>
+					<td>200+</td>
+					<td>2</td>
+					<td>150+</td>
+				</tr>
+				
+				<tr>
+					<td>Гауди Антонио</td>
+					<td>Модернизм, органическая архитектура</td>
+					<td>Испания</td>
+					<td>Испания</td>
+					<td>30+</td>
+					<td>144+</td>
+					<td>30+</td>
+				</tr>
+				
+				<tr>
+					<td>Нимейер Оскар</td>
+					<td>Модернизм, бразильский модернизм</td>
+					<td>Бразилия</td>
+					<td>Бразилия</td>
+					<td>600+</td>
+					<td>4</td>
+					<td>450+</td>
+				</tr>
+				
+				<tr>
+					<td>Кан Луис</td>
+					<td>Монументальный модернизм</td>
+					<td>Эстония</td>
+					<td>США</td>
+					<td>50+</td>
+					<td>20</td>
+					<td>40+</td>
+				</tr>
+				
+				<tr>
+					<td>Джонсон Филип</td>
+					<td>Модернизм, постмодернизм</td>
+					<td>США</td>
+					<td>США</td>
+					<td>200+</td>
+					<td>1</td>
+					<td>180+</td>
+				</tr>
+				
+				<tr>
+					<td>Пей Ио Мин</td>
+					<td>Модернизм, минимализм</td>
+					<td>Китай</td>
+					<td>США</td>
+					<td>100+</td>
+					<td>7</td>
+					<td>10+</td>
+				</tr>
+				
+				<tr>
+					<td>Утзон Йорн</td>
+					<td>Органический модернизм</td>
+					<td>Дания</td>
+					<td>Дания</td>
+					<td>50+</td>
+					<td>14</td>
+					<td>30+</td>
+				</tr>
+				
+				<tr>
+					<td>Танге Кэндзо</td>
+					<td>Метаболизм, модернизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>200+</td>
+					<td>3</td>
+					<td>150+</td>
+				</tr>
+				
+				<tr>
+					<td>Андо Тадао</td>
+					<td>Минимализм, региональный модернизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>200+</td>
+					<td>6</td>
+					<td>150+</td>
+				</tr>
+				
+				<tr>
+					<td>Исодзаки Арата</td>
+					<td>Постмодернизм, метаболизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>3</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Курокава Кисё</td>
+					<td>Метаболизм, постмодернизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>4</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Ито Тойо</td>
+					<td>Неофутуризм, хай-тек</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>6</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Кума Кэнго</td>
+					<td>Региональный модернизм, экологическая архитектура</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>200+</td>
+					<td>3</td>
+					<td>100+</td>
+				</tr>
+				
+				<tr>
+					<td>Бан Сигэру</td>
+					<td>Гуманистический модернизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>4</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Кулхас Рем</td>
+					<td>Деконструктивизм, концептуализм</td>
+					<td>Нидерланды</td>
+					<td>Нидерланды</td>
+					<td>100+</td>
+					<td>4</td>
+					<td>30+</td>
+				</tr>
+				
+				<tr>
+					<td>Нувель Жан</td>
+					<td>Контекстуализм, хай-тек</td>
+					<td>Франция</td><td>Франция</td>
+					<td>100+</td>
+					<td>4</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Либескинд Даниэль</td>
+					<td>Деконструктивизм</td>
+					<td>Польша</td>
+					<td>США</td>
+					<td>50+</td>
+					<td>7</td>
+					<td>0</td>
+				</tr>
+				
+				<tr>
+					<td>Роджерс Ричард</td>
+					<td>Хай-тек, модернизм</td>
+					<td>Италия</td>
+					<td>Великобритания</td>
+					<td>100+</td>
+					<td>5</td>
+					<td>20+</td>
+				</tr>
+				
+				<tr>
+					<td>Гримшоу Николас</td>
+					<td>Хай-тек</td>
+					<td>Великобритания</td>
+					<td>Великобритания</td>
+					<td>80+</td>
+					<td>5</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Чипперфилд Дэвид</td>
+					<td>Минимализм, контекстуализм</td>
+					<td>Великобритания</td>
+					<td>Великобритания</td>
+					<td>100+</td>
+					<td>14</td>
+					<td>50+</td>
+				</tr>
+				
+				<tr>
+					<td>Херцог Жак</td>
+					<td>Минимализм, современная архитектура</td>
+					<td>Швейцария</td>
+					<td>Швейцария</td>
+					<td>100+</td>
+					<td>5</td>
+					<td>50+</td>
+				</tr>
+				
+				<tr>
+					<td>Пьер де Мерон</td>
+					<td>Минимализм, современная архитектура</td>
+					<td>Швейцария</td>
+					<td>Швейцария</td>
+					<td>100+</td>
+					<td>5</td>
+					<td>50+</td>
+				</tr>
+				
+				<tr>
+					<td>Цумтор Петер</td>
+					<td>Тектонический минимализм</td>
+					<td>Швейцария</td>
+					<td>Швейцария</td>
+					<td>30+</td>
+					<td>10</td>
+					<td>25+</td>
+				</tr>
+				
+				<tr>
+					<td>Сиза Алвару</td>
+					<td>Португальский регионализм, модернизм</td>
+					<td>Португалия</td>
+					<td>Португалия</td>
+					<td>150+</td>
+					<td>29</td>
+					<td>100+</td>
+				</tr>
+				
+				<tr>
+					<td>Соуто де Моура Эдуарду</td>
+					<td>Минимализм, регионализм</td>
+					<td>Португалия</td>
+					<td>Португалия</td>
+					<td>100+</td>
+					<td>3</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Монео Рафаэль</td>
+					<td>Контекстуализм, постмодернизм</td>
+					<td>Испания</td>
+					<td>Испания</td>
+					<td>100+</td>
+					<td>9</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Бофиль Рикардо</td>
+					<td>Постмодернизм, неоклассицизм</td>
+					<td>Испания</td>
+					<td>Испания</td>
+					<td>100+</td>
+					<td>5</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Пелли Сесар</td>
+					<td>Современный модернизм</td>
+					<td>Аргентина</td>
+					<td>США</td>
+					<td>100+</td>
+					<td>37</td>
+					<td>10+</td>
+				</tr>
+				
+				<tr>
+					<td>Сафди Моше</td>
+					<td>Современный модернизм, гуманистическая архитектура</td>
+					<td>Израиль</td>
+					<td>Канада</td>
+					<td>100+</td>
+					<td>3</td>
+					<td>20+</td>
+				</tr>
+				
+				<tr>
+					<td>Холл Стивен</td>
+					<td>Контекстуализм, феноменологическая архитектура</td>
+					<td>США</td>
+					<td>США</td>
+					<td>70+</td>
+					<td>14</td>
+					<td>60+</td>
+				</tr>
+				
+				<tr>
+					<td>Маки Фумихико</td>
+					<td>Модернизм, метаболизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>23</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Нисидзава Рюэ</td>
+					<td>Современный японский модернизм</td>
+					<td>Япония</td>
+					<td>Япония</td>
+					<td>100+</td>
+					<td>8</td>
+					<td>70+</td>
+				</tr>
+				
+				<tr>
+					<td>Ингиелс Бьярке</td>
+					<td>Неофутуризм, устойчивый дизайн</td>
+					<td>Дания</td>
+					<td>Дания</td>
+					<td>80+</td>
+					<td>6</td>
+					<td>30+</td>
+				</tr>
+				
+				<tr>
+					<td>Бен ван Беркель</td>
+					<td>Неофутуризм, параметрическая архитектура</td>
+					<td>Нидерланды</td>
+					<td>Нидерланды</td>
+					<td>50+</td>
+					<td>3</td>
+					<td>20+</td>
+				</tr>
+				
+				<tr>
+					<td>Готтфрид Бём</td>
+					<td>Брутализм, экспрессионизм</td>
+					<td>Германия</td>
+					<td>Германия</td>
+					<td>150+</td>
+					<td>3</td>
+					<td>130+</td>
+				</tr>
+				
+				<tr>
+					<td>Сааринен Ээро</td>
+					<td>Модернизм, неофутуризм</td>
+					<td>Финляндия</td>
+					<td>США</td>
+					<td>50+</td>
+					<td>6</td>
+					<td>40+</td>
+				</tr>
+				
+				<tr>
+					<td>Нерви Пьер Луиджи</td>
+					<td>Инженерный модернизм, структурализм</td>
+					<td>Италия</td>
+					<td>Италия</td>
+					<td>100+</td>
+					<td>1</td>
+					<td>80+</td>
+				</tr>
+				
+				<tr>
+					<td>Корреа Чарльз</td>
+					<td>Индийский модернизм, регионализм</td>
+					<td>Индия</td>
+					<td>Индия</td>
+					<td>100+</td>
+					<td>15</td>
+					<td>90+</td>
+				</tr>
+				
+				<tr>
+					<td>Доси Балкришна</td>
+					<td>Индийский модернизм, регионализм</td>
+					<td>Индия</td>
+					<td>Индия</td>
+					<td>100+</td>
+					<td>15</td>
+					<td>90+</td>
+				</tr>
+				
+				<tr>
+					<td>Бёрл Маркс-Роберту</td>
+					<td>Модернизм, ландшафтная архитектура</td>
+					<td>Бразилия</td>
+					<td>Бразилия</td>
+					<td>100+</td>
+					<td>11</td>
+					<td>90+</td>
+				</tr>
+				
+				<tr>
+					<td>Бо Бардо Лина</td>
+					<td>Модернизм, бразильский регионализм</td>
+					<td>Италия</td>
+					<td>Бразилия</td>
+					<td>50+</td>
+					<td>9</td>
+					<td>40+</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		
+	</body>
+</html>
