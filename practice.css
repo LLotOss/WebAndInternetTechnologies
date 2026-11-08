@@ -12,7 +12,6 @@ div.menu div {
 	overflow: hidden;
 	height: auto;
 	width: auto;
-	align-items: flex-end;
 }
 
 div.menu > div.chosen {
@@ -28,29 +27,39 @@ div.logo {
 
 div.logo p {
 	text-align: left;
-	font-size: 2vh;
-	border: red solid;
+	font-size: 4vmin;
 }
 
 div.photos {
-	margin: 1vh auto;
+	margin: 1vh 0;
 	height: fit-content;
-	width: fit-content;
-	justify-content: center;
+	text-align: center;
+	padding: 0;
 }
 
-div.dispersed {
+table.dispersed {
 	width: 99.2vw;
+	margin: auto;
+	padding: auto;
+}
+
+div.pink table td {
+	vertical-align: top;
+}
+
+table.dispersed td {
+	width: auto;
+	text-align: center;
 }
 
 div.description {
-	margin: auto;
+	margin: 0;
 	align-items: center;
+	font-size: 2vmin;
 }
 
-div.more_button {
+span.more_button {
 	width: fit-content;
-	margin: 0.5vh 0.5vw;
 	background-color: #4dabf5;
 	border: solid black;
 	border-width: 0.5vh;
@@ -58,44 +67,47 @@ div.more_button {
 }
 
 div.pink {
-	width: 60vw;
+	width: 40vw;
 	height: fit-content;
 	border-radius: 2vw;
 	margin: 0.5vh auto;
 	background-color: pink;
 	justify-content: center;
-	align-items: flex-start;
 }
 
 div.brown {
-	width: auto;
+	padding: 1vh 1vw;
+	width: 90vw;
+	margin: auto;
 	height: auto;
+	padding: 2vh 2vw;
+	justify-content: center;
 }
 
 div.brown div {
-	width: 45vw;
+	width: 40vw;
 	height: fit-content;
 	border-radius: 2vw;
 	margin: 1vh auto;
 	background-color: #bcaaa4;
-	flex-direction: column;
-}
-
-div.main_image {
-	flex-direction: column;
-	justify-items: center;
+	align-items: center;
+	margin: auto 1vw;
+	padding: 2vh 0;
 }
 
 img.photo {
-	max-height: 30vh;
-	min-width: 20vw;
+	width: 22vw;
 	height: 30vh;
+}
+
+img.center {
+	width: 48.2vw;
 }
 
 img.circle {
 	height: 5vw;
 	width: 5vw;
-	border-radius: 50%;
+	border-radius: 5vw;
 }
 
 .pink img {
@@ -105,17 +117,23 @@ img.circle {
 }
 
 .brown img {
-	margin: 0.5vw auto;
+	margin: 1vh 2vw;
 	border-radius: 20%;
 	width: 20vw;
 }
 
+p {
+	font-size: 3vmin;
+}
+
 div p {
-	margin: 0.5vh 0.5vw;
+	margin: 1vh 2vw;
+	font-size: 2vmin;
 }
 
 div.description p {
-		margin: 0;
+	font-size: 2vmin;
+	margin: 0;
 }
 
 .pink p {
@@ -128,7 +146,7 @@ div.description p {
 }
 
 a {
-	font-size: 2vh;
+	font-size: 2vmin;
 	color: black;
 	text-decoration: none;
 	margin: 0;
@@ -144,7 +162,8 @@ div.more_button a {
 
 h1 {
 	font-weight: bold;
-	font-size: 2vh;
+	font-size: 2vmin;
+	margin: 2vh 2vw;
 }
 
 .pink h1 {
@@ -153,21 +172,12 @@ h1 {
 	min-width: 6vw;
 }
 
-p {
-	font-size: 3vh;
-}
-
 .pink div {
 	margin: 1vh auto;
 }
 
-.brown div {
-	align-items: center;
-	margin: auto 1vw;
-}
-
 footer {
-	font-size: 5vh;
+	font-size: 5vmin;
 	font-weight: bold;
 }
 
