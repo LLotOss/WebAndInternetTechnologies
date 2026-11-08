@@ -1,19 +1,16 @@
 div.menu {
 	margin: 1vh auto 0;
-	justify-content: center;
-	text-align: bottom;
-	display: flex;
-	width: auto;
-	height: auto;
+	height: 5vh;
+	justify-items: center;
+	width: fit-content;
 }
 
-div.menu > div {
-	display: flex;
-	margin: 0 0.5vh;
+div.menu div {
+	margin: 0;
 	margin-bottom: 0;
 	float: left;
 	overflow: hidden;
-	height: auto 1vh;
+	height: auto;
 	width: auto;
 	align-items: flex-end;
 }
@@ -23,41 +20,35 @@ div.menu > div.chosen {
 }
 
 div.logo {
-	display: inline-flex;
 	background-color: #4dabf5;
 	margin: 0;
-	width: 99.2vw;
 	height: 8vh;
-	align-items: center;
 	color: white;
 }
 
-div.logo > p {
+div.logo p {
+	text-align: left;
 	font-size: 2vh;
+	border: red solid;
 }
 
 div.photos {
-	align: center;
 	margin: 1vh auto;
-	display: flex;
+	height: fit-content;
 	width: fit-content;
 	justify-content: center;
 }
 
 div.dispersed {
 	width: 99.2vw;
-	display: flex;
 }
 
 div.description {
 	margin: auto;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 }
 
 div.more_button {
-	display: flex;
 	width: fit-content;
 	margin: 0.5vh 0.5vw;
 	background-color: #4dabf5;
@@ -69,24 +60,21 @@ div.more_button {
 div.pink {
 	width: 60vw;
 	height: fit-content;
-	display: flex;
 	border-radius: 2vw;
 	margin: 0.5vh auto;
 	background-color: pink;
 	justify-content: center;
-	align-items: top;
+	align-items: flex-start;
 }
 
 div.brown {
-	display: flex;
 	width: auto;
 	height: auto;
 }
 
-div.brown > div {
+div.brown div {
 	width: 45vw;
 	height: fit-content;
-	display: flex;
 	border-radius: 2vw;
 	margin: 1vh auto;
 	background-color: #bcaaa4;
@@ -94,12 +82,13 @@ div.brown > div {
 }
 
 div.main_image {
-	display: flex;
 	flex-direction: column;
 	justify-items: center;
 }
 
-.photos > img {
+img.photo {
+	max-height: 30vh;
+	min-width: 20vw;
 	height: 30vh;
 }
 
@@ -121,16 +110,17 @@ img.circle {
 	width: 20vw;
 }
 
-div > p {
+div p {
 	margin: 0.5vh 0.5vw;
 }
 
-div.description > p {
+div.description p {
 		margin: 0;
 }
 
 .pink p {
-	width: 40vw;
+	min-width: 50%;
+	width: auto;
 }
 
 .chosen a {
@@ -144,6 +134,10 @@ a {
 	margin: 0;
 }
 
+div.pink a, div.brown a {
+	text-decoration: underline;
+}
+
 div.more_button a {
 	color: white;
 }
@@ -151,15 +145,16 @@ div.more_button a {
 h1 {
 	font-weight: bold;
 	font-size: 2vh;
-	justify-content: middle;
 }
 
 .pink h1 {
-	width: 6vw;
+	margin: 1vw;
+	width: auto;
+	min-width: 6vw;
 }
 
 p {
-	font-size: 2vh;
+	font-size: 3vh;
 }
 
 .pink div {
@@ -177,10 +172,8 @@ footer {
 }
 
 hr {
-	size: 10vh;
-	color: grey;
-}
-
-body {
 	margin: 0;
+	height: 3vh;
+	background-color: grey;
+	border: none;
 }
