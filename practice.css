@@ -1,16 +1,15 @@
 div.menu {
-	margin: 1vh auto 0;
-	height: 5vh;
+	height: 20%;
+	margin: 0;
 	justify-items: center;
-	width: fit-content;
+	text-align: center;
 }
 
 div.menu div {
+	display: inline-block;
+	height: 20%;
 	margin: 0;
 	margin-bottom: 0;
-	float: left;
-	overflow: hidden;
-	height: auto;
 	width: auto;
 }
 
@@ -21,83 +20,71 @@ div.menu > div.chosen {
 div.logo {
 	background-color: #4dabf5;
 	margin: 0;
-	height: 8vh;
+	height: 8%;
 	color: white;
 }
 
 div.logo p {
+	margin: 0;
 	text-align: left;
-	font-size: 4vmin;
 }
 
 div.photos {
-	margin: 1vh 0;
-	height: fit-content;
+	margin: 1% 0;
 	text-align: center;
 	padding: 0;
 }
 
-table.dispersed {
-	width: 99.2vw;
-	margin: auto;
-	padding: auto;
-}
-
-div.pink table td {
-	vertical-align: top;
-}
-
-table.dispersed td {
-	width: auto;
+div.dispersed {
+	margin: 2% auto;
 	text-align: center;
+	height: auto;
+}
+
+div.pink div {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	margin: 1%;
+	padding: 0;
 }
 
 div.description {
-	margin: 0;
+	display: inline-block;
+	margin: 1%;
+	width: 20%;
 	align-items: center;
 	font-size: 2vmin;
 }
 
 span.more_button {
-	width: fit-content;
 	background-color: #4dabf5;
 	border: solid black;
-	border-width: 0.5vh;
-	border-radius: 0.5vw;
+	border-width: 0.2vw;
+	border-radius: 20%;
+	line-height: 2em;
 }
 
 div.pink {
-	width: 40vw;
-	height: fit-content;
-	border-radius: 2vw;
-	margin: 0.5vh auto;
+	width: 50%;
+	border-radius: 5%;
+	margin: 2% auto;
 	background-color: pink;
-	justify-content: center;
 }
 
 div.brown {
-	padding: 1vh 1vw;
-	width: 90vw;
-	margin: auto;
-	height: auto;
-	padding: 2vh 2vw;
-	justify-content: center;
-}
-
-div.brown div {
-	width: 40vw;
-	height: fit-content;
+	display: inline-block;
+	width: 40%;
 	border-radius: 2vw;
-	margin: 1vh auto;
+	margin: 2%;
 	background-color: #bcaaa4;
-	align-items: center;
-	margin: auto 1vw;
-	padding: 2vh 0;
+	text-align: center;	
+	padding: 2% 0;
 }
 
 img.photo {
-	width: 22vw;
 	height: 30vh;
+	width: 22vw;
 }
 
 img.center {
@@ -113,32 +100,38 @@ img.circle {
 .pink img {
 	margin: auto 0.5vw;
 	border-radius: 20%;
-	width: 10vw;
+	width: 80%;
 }
 
 .brown img {
-	margin: 1vh 2vw;
+	display: inline-block;
+	margin: 1vh auto;
 	border-radius: 20%;
-	width: 20vw;
+	width: 50%;
 }
 
 p {
-	font-size: 3vmin;
+	font-size: 2vmin;
+	overflow-wrap: break-word;
 }
 
 div p {
 	margin: 1vh 2vw;
-	font-size: 2vmin;
+	font-size: 0.8vw;
 }
 
 div.description p {
 	font-size: 2vmin;
-	margin: 0;
+	margin: 0.25em 0;
 }
 
 .pink p {
-	min-width: 50%;
-	width: auto;
+	margin: 0;
+	width: 100%;
+}
+
+.brown p {
+	text-align: left;
 }
 
 .chosen a {
@@ -162,7 +155,7 @@ div.more_button a {
 
 h1 {
 	font-weight: bold;
-	font-size: 2vmin;
+	font-size: 1vw;
 	margin: 2vh 2vw;
 }
 
@@ -172,8 +165,18 @@ h1 {
 	min-width: 6vw;
 }
 
-.pink div {
-	margin: 1vh auto;
+.brown h1 {
+	text-align: center;
+}
+
+a.right {
+	display: block;
+	text-align: right;
+} 
+
+a.left {
+	display: block;
+	text-align: left;
 }
 
 footer {
@@ -182,8 +185,17 @@ footer {
 }
 
 hr {
-	margin: 0;
+	margin: 2%;
 	height: 3vh;
 	background-color: grey;
 	border: none;
+}
+
+div.bottom {
+	text-align: center;
+	vertical-align: top;
+}
+
+body {
+	margin: 0;
 }
